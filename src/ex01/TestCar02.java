@@ -37,6 +37,11 @@ public class TestCar02 {
 		car2.info();
 		
 
+		Car car3 = new Car();
+		car3.name = "내차";
+		car3.color = "pink";
+		car3.year = 2026;
+		car3.info();
 	}
 
 }
