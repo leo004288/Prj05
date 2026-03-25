@@ -21,6 +21,12 @@ class Cat extends Pet {
 	
 }
 
+class Tiger extends Pet {
+	void cry() {
+		System.out.println(name + "(이)가 어흥");
+	}
+}
+
 
 public class TeatAnimalInherit {
 
@@ -28,21 +34,60 @@ public class TeatAnimalInherit {
 //	상속은 한개만 가능 -> java, c#
 	public static void main(String[] args) {
 		
-		Pet pet = new Pet();
-		pet.name = "뻐끔이";
-		pet.eat();
-		
 		Dog dog = new Dog();
-		dog.name = "츄";
-		dog.eat();
-		dog.bark();
+		work(dog, "츄");
+//		dog.name = "츄";
+//		dog.eat();
+//		dog.bark();
 		
 		Cat cat = new Cat();
-		cat.name = "네로";
-		cat.eat();
-		cat.meow();
+		work(cat, "네로");
+//		cat.name = "네로";
+//		cat.eat();
+//		cat.meow();
+		
+		Tiger tiger = new Tiger();
+		work(tiger, "타이거");
+		
+		Pet pet = new Pet();
+		pet.name = "뻐끔이";
+		pet.eat();		
+		
+//		pet = dog;
+//		pet.eat();
+//		pet.bark();
+//		
+//		dog = (Dog) pet;
+//		dog.eat();
 		
 		
 	} //
+
+private static void work(Pet pet, String name) {
+	pet.name = name;
+	pet.eat();
+	
+	if (pet instanceof Dog) 
+		((Dog) pet).bark();
+	if (pet instanceof Cat)
+		((Cat) pet).meow();
+	if (pet instanceof Tiger)
+		((Tiger) pet).cry();
+}
+	
+	
+//---------------------
+//private static void work(Cat cat, String name) {
+//	cat.name = name;
+//	cat.eat();
+//	cat.meow();
+//}
+//
+//private static void work(Dog dog, String name) {
+//	dog.name = name;
+//	dog.eat();
+//	dog.bark();
+//}
+//	-------------------
 
 } //
