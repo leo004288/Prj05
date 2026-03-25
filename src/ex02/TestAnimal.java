@@ -2,7 +2,7 @@ package ex02;
 
 abstract class Animal {
 	String name;
-	int    age;
+	int    age; //
 	void eat() {
 		System.out.println(name + "(이)가 먹는다");
 	}
