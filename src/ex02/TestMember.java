@@ -1,5 +1,7 @@
 package ex02;
 
+import java.util.Iterator;
+
 class Member{
 	//field
 	String name;
@@ -66,9 +68,13 @@ public class TestMember {
 		mList[0] = new Member("사나", "sana", "sana@jyp.com", 2017);
 		mList[1] = new Member("정연", "JN", "JN@jyp.com", 2017);
 		mList[2] = new Member("나연", "NY", "NY@jyp.com", 2017);
-		mList[0].info();
-		mList[1].info();
-		mList[2].info();
+//		mList[0].info();
+//		mList[1].info();
+//		mList[2].info();
+		for (int i = 0; i < mList.length; i++) {
+			Member member = mList[i];
+			member.info();
+		}
 		
 		
 	} //
